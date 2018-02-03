@@ -13,7 +13,7 @@ a=20
 x = np.arange(0.01,40,0.01)
 
 H1 = lambda x: np.piecewise(x,[x < 20. , x >= 20],[1, 0])
-H2 = lambda x: np.piecewise(x,[x < 20. , x >= 20],[0, 1])   
+H2 = lambda x: np.piecewise(x,[x < 20. , x >= 20],[0, 1])
 
 K= H1(x)*(po/sc.epsilon_0)*((x/3)-(x**3)/(5*a**2))+H2(x)*((a**3)/x**2)*(po/sc.epsilon_0)*(0.133333333)
 k1=H2(x)*((a**3)/x**2)*(po/sc.epsilon_0)*(0.133333333)

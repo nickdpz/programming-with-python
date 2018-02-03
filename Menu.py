@@ -4,9 +4,11 @@
 import numpy as np
 import matplotlib.pylab as plt
 from scipy import special
+import base64
 
 nx = 1
 ny = nx
+z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 wavelength = np.array([0.075, 0.0375, 0.0273])
 D = np.linspace(-1, 1, 1000)
 u = 1
@@ -16,6 +18,7 @@ if x == 1:
     Lx = np.array([0.2, 0.4, 0.6])
     Ly = np.linspace(-1, 1, 1000)
     fig = plt.figure("Rectangular_x_Beam_pattern", figsize=(22,12), facecolor ='white', edgecolor='blue')
+    plt.title('Nicolas Pastran y Katherin Castelblanco',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
     fig.set_size_inches(15, 10)
     P_rectangular1 = (np.sin((np.pi*Lx[0]/wavelength[2])*np.sin(theta))/((np.pi*Lx[0]/wavelength[2])*np.sin(theta)))
     P_rectangular2 = (np.sin((np.pi*Lx[1]/wavelength[2])*np.sin(theta))/((np.pi*Lx[1]/wavelength[2])*np.sin(theta)))
@@ -37,6 +40,7 @@ if x == 1:
     plt.grid(True)
     plt.title('Dx = 0.4 m')
     ax = plt.subplot(133)
+    plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
     plt.plot (np.degrees(theta), 10*np.log10((P_rectangular3/np.amax(P_rectangular3))**2), 'purple', label=' 0.6 m')
     plt.xlabel('Dy ( m )')
     plt.ylabel(r'Power $\theta$($\circ$)')
@@ -68,6 +72,7 @@ if x == 2:
     plt.ylim([-60, 0])
     plt.legend()
     ax = plt.subplot(132)
+    plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
     plt.plot(np.degrees(np.linspace(-np.pi/2, np.pi/2, 1000)), 10*np.log10((P_circular2/np.amax(P_circular2))**2), 'g')
     plt.title('a = ' + str(0.3) + 'm')
     plt.xlabel(r'Angle $\theta$($\circ$)')
@@ -115,6 +120,7 @@ else :
     # P_potter3 = ( 1 - ( alpha /(1 - (3.832**2 / (* ( special . jv ( 1 , ( k * r [2]* np . sin ( theta ) )- alpha *((( betaE3 / k ) + np . cos (* ( special . jv ( 1 , ( k * r [0]* np . sin (( k * r [0]* np . sin ( theta ) ) **2) )) / k * r [0]* np . sin ( theta ) )( k * r [1]* np . sin ( theta ) ) **2) )) / k * r [1]* np . sin ( theta ) )( k * r [2]* np . sin ( theta ) ) **2) )) / k * r [2]* np . sin ( theta ) ))))))))))
     ax = plt.subplot(131)
     plt.plot(np.degrees(theta), 10*np.log10((P_potter2/np.amax(P_potter2))**2), 'b')
+    plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
     plt.title('a = ' + str(r[1]) + ' m ')
     plt.ylim([-60, 0])
     plt.xlabel(r'Angle $\theta$($\circ$)')

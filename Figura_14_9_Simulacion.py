@@ -7,15 +7,18 @@ import numpy as np
 import scipy.constants as constant
 import matplotlib.pyplot as plot
 import matplotlib.animation as animation
-
+import base64
 
 
 radio,theta =np.meshgrid(np.linspace(0,20,1000),np.linspace(0,2*constant.pi,1000))
 x=radio*np.cos(theta);
 y=radio*np.sin(theta);
 wt=constant.pi
+p = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 
 fig=plot.figure('Fuerza Electrica de un Dipolo Oscilante Figura 14.9',figsize=(20,10),facecolor = 'white',edgecolor='blue')
+plot.figtext(0.5, 0.5, p , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
+
 contour_axes=fig.add_subplot(111)
 def update(t):
 	plot.cla()	

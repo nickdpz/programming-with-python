@@ -4,12 +4,14 @@
 
 import numpy as np
 import matplotlib.pyplot as plot
+import base64
 from matplotlib.widgets import Button
 import matplotlib.pylab as plt
 from scipy import special
 
 nx = 1
 ny = nx
+z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 wavelength = np.array([0.075, 0.0375, 0.0273])
 D = np.linspace(-1, 1, 1000)
 u = 1
@@ -29,6 +31,7 @@ class Index(object):
         P_rectangular2 = (np.sin((np.pi*Lx[1]/wavelength[2])*np.sin(theta))/((np.pi*Lx[1]/wavelength[2])*np.sin(theta)))
         P_rectangular3 = (np.sin((np.pi*Lx[2]/wavelength[2])*np.sin(theta))/((np.pi*Lx[2]/wavelength[2])*np.sin(theta)))
         ax = plt.subplot(131)
+        plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
         plt.plot(np.degrees(theta), 10*np.log10((P_rectangular1/np.amax(P_rectangular1))**2), 'b', label='0.2m')
         plt.xlabel(r'Angle $\theta$($\circ$)')
         plt.ylabel('Power(dB)')
@@ -94,7 +97,10 @@ class Index(object):
         plt.title(r'$\lambda$=' + str(wavelength[1]))
         plt.tight_layout()
         plt.savefig('Circular_Beam_pattern.png')
-        plt.show()
+        if z != 1:
+            plt.show()
+        else :
+            print('Grafica hecha por NIcolas Pastran')   
 
     def aluminium(self, event):
         D = np.linspace(-1, 1, 1000)

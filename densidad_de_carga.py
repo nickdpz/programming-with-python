@@ -1,8 +1,12 @@
+#Nicolas Pastran cod:20151005087
+#Katherin Castelblanco cod:20151005571
+
 import matplotlib.pyplot as plt
 import numpy as np
-
-fig = plt.figure("Distribucion de carga")
+import base64
+fig = plt.figure('Densidad de Carga - NIcolas Pastran', figsize=(13,8), facecolor = 'white',edgecolor='blue')
 p0=1
+z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 r1=np.arange(0., 20., 0.005)
 p1=p0*(1-(r1**2)/(20**2))
 plt.plot(r1,p1, color="#333FFF", linewidth=2)
@@ -26,5 +30,7 @@ plt.grid(color = '0.5', linestyle = '--', linewidth = 1)
 plt.title('$Densidad$ $de$ $carga$ $de$ $una$ $esfera$', fontsize =20, color ='blue')
 plt.ylabel('$Densidad$ $de$ $carga$ $(c/m^3)$', fontsize = 16, color ='blue')
 plt.xlabel("$Radio (m)$", fontsize = 16, color = 'blue')
+plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
+
 plt.show()
 

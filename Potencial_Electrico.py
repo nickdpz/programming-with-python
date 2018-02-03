@@ -5,11 +5,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as sc
 from matplotlib.widgets import Slider, Button, RadioButtons
+import base64
 
 fig, ax = plt.subplots(figsize=(20,10))
 plt.subplots_adjust(left=0.15, bottom=0.30)
 po=0.000002
 a=20
+p = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 x = np.arange(0.01,40,0.01)
 
 H1 = lambda x: np.piecewise(x,[x < 20. , x >= 20],[1, 0])
@@ -19,7 +21,7 @@ K= H1(x)*(po/sc.epsilon_0)*(-(x**2)/6+(x**4)/(20*a**2)+(a**2)/4)+H2(x)*((a**3)/x
 k1=H2(x)*((a**3)/x)*(po/sc.epsilon_0)*(0.133333333)
 
 plt.plot(x,K,'blue',linewidth=2,label="Potencial Interno",color="blue")
-
+plt.figtext(0.5, 0.5, p , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
 plt.plot(x,k1, linewidth=2, label="Potencial Externo",color="green")
 plt.legend(loc=1)
 

@@ -4,15 +4,16 @@
 import numpy as np
 import scipy.constants as constant
 import matplotlib.pyplot as plt
+import base64
 from matplotlib.widgets import Slider
 
 
 a=1
 w = 2
 E = 5*constant.pi
+z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 
-
-fig=plt.figure('Fibra Optica',figsize=(22,12),facecolor = 'white',edgecolor='blue')
+fig=plt.figure('Fibra Optica - Nicolas Pastran',figsize=(22,12),facecolor = 'white',edgecolor='blue')
 plt.subplot(1,1,1)
 plt.subplots_adjust(bottom=0.18)
 
@@ -28,10 +29,12 @@ l3, = plt.plot(alpha, grafica3, lw=2, color='red')
 plt.xlabel(r'$\alpha$', fontsize = 24, color = 'blue')
 plt.ylabel(r'$\beta/\alpha$', fontsize = 24, color = 'red')
 plt.title('Fibra Optica',fontsize = 25, color = 'black', horizontalalignment = 'center')
-#plt.suptitle('Nicolas Pastran y Katherin Castelblanco',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
+#plt.title('Nicolas Pastran y Katherin Castelblanco',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
+
 plt.xlim([0,10*constant.pi])
 plt.ylim([0,5])
 #plt.yticks(np.linspace(1,5,4,endpoint=True),fontsize = 14, color = 'black')
+plt.figtext(0.5, 0.5, z , style='italic', wrap=True, horizontalalignment='center', fontsize=18, color='gray')
 plt.xticks([0, constant.pi,2*constant.pi,3*constant.pi,4*constant.pi,5*constant.pi,6*constant.pi,7*constant.pi,8*constant.pi,9*constant.pi,10*constant.pi],
            [r'$0$',r'$\pi$',r'$2\pi$',r'$3\pi$',r'$4\pi$',r'$5\pi$',r'$6\pi$',r'$7\pi$',r'$8\pi$',r'$9\pi$',r'$10\pi$'],fontsize = 17, color = 'black')
 plt.grid(True)
@@ -43,6 +46,7 @@ axE = plt.axes([0.2, 0.04, 0.65, 0.05], axisbg=axcolor)
 sldE = Slider(axE, r'$\epsilon$',0.5, 250.0, valinit=E)
 
 
+
 def update(val):
     E = sldE.val
     l1.set_ydata(np.tan(0.5*alpha*a))
@@ -50,5 +54,7 @@ def update(val):
     l3.set_ydata(((w**2)*E/(alpha**2))-1)
     fig.canvas.draw_idle()
 sldE.on_changed(update)
-
-plt.show()
+if z != 1:
+    plt.show()
+else :
+   print('Hola')   
