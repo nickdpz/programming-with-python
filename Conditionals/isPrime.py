@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-def is_prime(number):
+def isPrime(number):
     if number < 2:
         return False
     elif number == 2:
@@ -17,7 +17,7 @@ def is_prime(number):
 
 def run():
     number = int(input('Escribe un número: '))
-    result = is_prime(number)
+    result = isPrime(number)
 
     if result is True:
         print('Tu número es primo')
