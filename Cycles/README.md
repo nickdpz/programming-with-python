@@ -1,9 +1,9 @@
-# Cycles
+## Cycles Guide
 
-## While
+### While
 
-## For
+### For
 
 ## Break 
 
-## Continue 
+### Continue 
