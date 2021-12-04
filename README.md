@@ -1,2 +1,3 @@
-# Graficas-Ondas-Electromagneticas-en-python
-Estas graficas descirben el comportamiento de las ondas electromagneticas en el vacio y en diferentes medios 3
+# Guía de manejo de Python
+Este repositorio busca ser una guía la implementación de buenas prácticas de programación en Python. 
+Se hubieran todos los hacks y operaciones básicas que entrega el lenguaje para desarrollar proyectos de gran impacto.
