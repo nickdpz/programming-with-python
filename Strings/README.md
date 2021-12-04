@@ -1,7 +1,8 @@
 ## String manage
-‘‘‘python
+
+```python
 name = """
 I am string with line jump
 Look that me
 """
-‘‘‘
+```
