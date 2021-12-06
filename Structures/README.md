@@ -4,6 +4,8 @@ Save many values in a one variable.
 
 ### List
 
+A list is a data structure that store repeating values
+
 - List Operators
 
 ```python
@@ -76,4 +78,31 @@ a=(list(range(0,10,2)))# a=[0,2,4,6,8]
 ```python
 a=[0,2,4,6,8]
 b=len(a)#5
+```
+
+### Tuple
+
+- Change values of a tuple
+
+```python
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+```
+
+### Maps
+
+- Iterate map
+
+```python
+countries = {
+    "Argentina": 44938712,
+    "Bolivia": 11510225,
+    "Brasil": 210147125,
+    "Colombia": 50372424,
+}
+
+for keys, values in countries.items():
+    print(f'county {keys} has {values} population')
 ```
