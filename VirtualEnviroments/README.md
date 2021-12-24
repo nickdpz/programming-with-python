@@ -30,3 +30,8 @@ $ pip install -r requirements.txt
 $ pip install pandas
 ```
 
+- Update dependencies
+
+```sh
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+```
