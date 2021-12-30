@@ -1,7 +1,4 @@
 ﻿#Constantes de atenuación
-#Katherin Castelblanco - 20151005571
-#Nicolas Pastran       - 20151005087
-
 import numpy as np
 import matplotlib.pyplot as plot
 from matplotlib.widgets import Button

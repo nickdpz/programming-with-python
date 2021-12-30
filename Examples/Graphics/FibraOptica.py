@@ -1,6 +1,4 @@
 ﻿#Fibra Optica
-#Katherin Castelblanco - 20151005571
-#Nicolas Pastran       - 20151005087
 import numpy as np
 import scipy.constants as constant
 import matplotlib.pyplot as plt
@@ -13,7 +11,7 @@ w = 2
 E = 5*constant.pi
 z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 
-fig=plt.figure('Fibra Optica - Nicolas Pastran',figsize=(22,12),facecolor = 'white',edgecolor='blue')
+fig=plt.figure('Fibra Optica',figsize=(22,12),facecolor = 'white',edgecolor='blue')
 plt.subplot(1,1,1)
 plt.subplots_adjust(bottom=0.18)
 
@@ -29,7 +27,6 @@ l3, = plt.plot(alpha, grafica3, lw=2, color='red')
 plt.xlabel(r'$\alpha$', fontsize = 24, color = 'blue')
 plt.ylabel(r'$\beta/\alpha$', fontsize = 24, color = 'red')
 plt.title('Fibra Optica',fontsize = 25, color = 'black', horizontalalignment = 'center')
-#plt.title('Nicolas Pastran y Katherin Castelblanco',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
 
 plt.xlim([0,10*constant.pi])
 plt.ylim([0,5])

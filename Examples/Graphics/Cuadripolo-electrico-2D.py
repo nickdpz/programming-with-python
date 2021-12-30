@@ -1,8 +1,5 @@
 #GRAFICA CUADRUPOLO ELECTRICO 2D
 
-#Nicolas David Pastran Zamora 20151005087
-#Katherine Castelblanco Romero 20151005571
-
 import numpy as np
 import matplotlib.pyplot as plt
 

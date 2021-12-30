@@ -18,7 +18,7 @@ if x == 1:
     Lx = np.array([0.2, 0.4, 0.6])
     Ly = np.linspace(-1, 1, 1000)
     fig = plt.figure("Rectangular_x_Beam_pattern", figsize=(22,12), facecolor ='white', edgecolor='blue')
-    plt.title('Nicolas Pastran y Katherin Castelblanco',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
+    plt.title('Campo',fontsize = 15, color = 'drackblue', verticalalignment = 'baseline', horizontalalignment = 'center')
     fig.set_size_inches(15, 10)
     P_rectangular1 = (np.sin((np.pi*Lx[0]/wavelength[2])*np.sin(theta))/((np.pi*Lx[0]/wavelength[2])*np.sin(theta)))
     P_rectangular2 = (np.sin((np.pi*Lx[1]/wavelength[2])*np.sin(theta))/((np.pi*Lx[1]/wavelength[2])*np.sin(theta)))

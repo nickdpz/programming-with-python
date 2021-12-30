@@ -1,6 +1,3 @@
-#Nicolas Pastran cod:20151005087
-#Katherin Castelblanco cod:20151005571
-
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.widgets import Slider
@@ -70,6 +67,3 @@ sfreq.on_changed(update)
 
 
 plt.show()
-
-#Nicolas Pastran cod:20151005087
-#Katherin Castelblanco cod:20151005571

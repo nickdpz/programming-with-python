@@ -1,7 +1,4 @@
 ﻿#Figura 14.11
-#Katherin Castelblanco - 20151005571
-#Nicolas Pastran       - 20151005087
-
 import numpy as np
 import scipy.constants as constant
 import matplotlib.pyplot as plot

@@ -1,6 +1,3 @@
-#Nicolas Pastran cod:20151005087
-#Katherin Castelblanco cod:20151005571
-
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.constants as sc

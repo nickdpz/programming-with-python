@@ -1,10 +1,7 @@
-#Nicolas Pastran cod:20151005087
-#Katherin Castelblanco cod:20151005571
-
 import matplotlib.pyplot as plt
 import numpy as np
 import base64
-fig = plt.figure('Densidad de Carga - NIcolas Pastran', figsize=(13,8), facecolor = 'white',edgecolor='blue')
+fig = plt.figure('Densidad de Carga', figsize=(13,8), facecolor = 'white',edgecolor='blue')
 p0=1
 z = base64.decodestring("QXV0b3IgTmljb2xhcyBEYXZpZCBQYXN0cmFuIFphbW9yYQ==")
 r1=np.arange(0., 20., 0.005)

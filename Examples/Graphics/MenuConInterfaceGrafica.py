@@ -1,7 +1,4 @@
 ﻿#Graficas Finales
-#Katherin Castelblanco - 20151005571
-#Nicolas Pastran       - 20151005087
-
 import numpy as np
 import matplotlib.pyplot as plot
 import base64
@@ -100,7 +97,7 @@ class Index(object):
         if z != 1:
             plt.show()
         else :
-            print('Grafica hecha por NIcolas Pastran')   
+            print('Grafica')   
 
     def aluminium(self, event):
         D = np.linspace(-1, 1, 1000)
