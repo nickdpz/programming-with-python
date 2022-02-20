@@ -120,13 +120,11 @@ superList = [
 - List comprehensions (List and Map merge)
 
 ```python
-multiplesFourSixNine = [item for item in range(
-        0, 100)if item % 4 == 0 and item % 6 == 0 and item % 9 == 0]
+multiplesFourSixNine = [item for item in range(0, 100)if item % 4 == 0 and item % 6 == 0 and item % 9 == 0]
 ```
 
 - Dictionary comprehensions
 
 ```python
-squareMulTwo={item: item**(1/2)
-                 for item in range(0, 10) if item % 2 == 0}
+squareMulTwo={item: item**(1/2) for item in range(0, 10) if item % 2 == 0}
 ```
