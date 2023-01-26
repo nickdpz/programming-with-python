@@ -40,7 +40,7 @@ num: Tuple[int, bool, str, float] = (1, False, "Hola", 3.5)
 
 # Example 7
 msg: str = "This are the coordinates"
-CoordinatesType = list[Dict[str, Tuple[int, int, str]]]
+CoordinatesType = List[Dict[str, Tuple[int, int, str]]]
 
 coordinates: CoordinatesType = [
     {"place1": (4, 5, msg), "place2": (10, 45, msg)},
